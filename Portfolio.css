@@ -19,9 +19,9 @@ html {
 
 body {
   margin: 0;
-  background: #f1eee7;
+  background: var(--cream);
   color: var(--teal);
-  font-family: "Manrope", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
@@ -34,8 +34,8 @@ a {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  max-width: 1200px;
-  padding: 1.2rem 2.5rem;
+  max-width: 1100px;
+  padding: 1rem 2rem;
 }
 
 .brand {
@@ -70,22 +70,22 @@ em {
 .content-section,
 .about-layout {
   margin: auto;
-  max-width: 1200px;
-  padding: 3.5rem 2.5rem;
+  max-width: 1100px;
+  padding: 3rem 2rem;
 }
 .hero {
-  align-items: start;
+  align-items: center;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  min-height: 520px;
-  padding-top: 3rem;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  min-height: 430px;
+  padding-top: 2rem;
 }
 .eyebrow,
 .section-number,
 .project-topline,
 .experience-meta,
 .footer-bottom {
-  font-family: "DM Mono", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -110,37 +110,37 @@ p {
 }
 h1,
 h2 {
-  letter-spacing: -0.065em;
-  line-height: 0.98;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
 }
 h1 {
-  font-size: clamp(3rem, 6vw, 5.2rem);
-  font-weight: 800;
-  margin: 1.5rem 0;
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin: 1.25rem 0;
   max-width: 850px;
 }
 h2 {
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  font-weight: 800;
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-weight: 700;
 }
 .hero-summary {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 0.95rem;
   max-width: 510px;
 }
 .hero-actions {
   align-items: center;
   display: flex;
-  gap: 1.8rem;
-  margin-top: 2rem;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
 }
 .button {
   display: inline-flex;
   gap: 1.3rem;
   align-items: center;
   font-size: 0.78rem;
-  font-weight: 800;
-  padding: 0.95rem 1.2rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
   text-decoration: none;
 }
 .button-primary {
@@ -153,7 +153,6 @@ h2 {
 .button-primary:hover,
 .button-primary:focus-visible {
   background: var(--teal);
-  transform: translateY(-3px);
 }
 .text-link {
   border-bottom: 1px solid var(--teal);
@@ -171,11 +170,12 @@ h2 {
   color: var(--orange);
   display: flex;
   flex-direction: column;
-  font-family: "DM Mono", monospace;
-  font-size: 5.5rem;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid var(--line);
+  font-size: 4rem;
+  font-weight: 400;
   line-height: 0.8;
-  transform: none;
+  padding: 1.5rem;
 }
 .mark-line {
   background: var(--orange);
@@ -194,12 +194,12 @@ h2 {
 .content-section {
   border-top: 1px solid var(--line);
   display: grid;
-  gap: 2.5rem;
+  gap: 2rem;
   grid-template-columns: 0.8fr 1.2fr;
 }
 .section-number {
   color: var(--orange);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .section-heading h2 {
   margin-bottom: 0;
@@ -245,20 +245,18 @@ h2 {
 .skill-cloud span {
   border: 1px solid var(--line);
   color: var(--muted);
-  font-family: "DM Mono", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.63rem;
   padding: 0.3rem 0.55rem;
 }
 
 .projects-section {
-  background: var(--teal);
-  color: var(--paper);
-  max-width: none;
-  padding-left: max(2.5rem, calc((100% - 1200px) / 2 + 2.5rem));
-  padding-right: max(2.5rem, calc((100% - 1200px) / 2 + 2.5rem));
+  background: #e7e2d8;
+  color: var(--teal);
+  max-width: 1100px;
 }
 .projects-section .section-number {
-  color: #ff9b76;
+  color: var(--orange);
 }
 .project-grid {
   display: grid;
@@ -268,18 +266,20 @@ h2 {
 .project-card {
   display: flex;
   flex-direction: column;
-  min-height: 300px;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 270px;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
 }
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: none;
 }
 .project-card-dark {
-  background: #173f50;
+  background: var(--paper);
+  color: var(--teal);
 }
 .project-card-light {
-  background: var(--orange);
+  background: #fffaf2;
+  color: var(--teal);
 }
 .project-topline {
   display: flex;
@@ -287,20 +287,19 @@ h2 {
   opacity: 0.7;
 }
 .project-card h3 {
-  font-size: 2rem;
-  letter-spacing: -0.07em;
-  line-height: 0.95;
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
   margin: auto 0 1.2rem;
 }
 .project-card p {
-  color: inherit;
-  opacity: 0.72;
+  color: var(--muted);
 }
 .project-footer {
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--line);
   display: flex;
-  font-family: "DM Mono", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.62rem;
   justify-content: space-between;
   margin-top: 1rem;
@@ -312,7 +311,7 @@ h2 {
 
 .about-layout {
   display: grid;
-  gap: 2.5rem;
+  gap: 2rem;
   grid-template-columns: 0.8fr 1.2fr;
 }
 .details-grid {
@@ -326,7 +325,7 @@ h2 {
 }
 .detail-block h3 {
   color: var(--orange);
-  font-family: "DM Mono", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -343,7 +342,7 @@ h2 {
 .detail-row span,
 .detail-row small {
   color: var(--muted);
-  font-family: "DM Mono", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.63rem;
 }
 .achievements-block {
@@ -367,13 +366,13 @@ h2 {
 }
 
 .site-footer {
-  background: var(--teal-deep);
+  background: var(--teal);
   color: var(--paper);
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr auto;
   margin-top: 2rem;
-  padding: 3.5rem max(2.5rem, calc((100% - 1200px) / 2 + 2.5rem)) 1.5rem;
+  padding: 3rem max(2rem, calc((100% - 1100px) / 2 + 2rem)) 1.5rem;
 }
 .site-footer h2 {
   margin-bottom: 1rem;
@@ -411,16 +410,18 @@ h2 {
   .hero {
     display: block;
     min-height: auto;
-    padding-bottom: 4rem;
-    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
   }
   h1 {
-    font-size: clamp(3.2rem, 15vw, 5rem);
+    font-size: clamp(2.7rem, 13vw, 4.2rem);
   }
   .hero-mark {
     align-items: flex-end;
-    font-size: 4rem;
-    margin-top: 2.5rem;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
   }
   .hero-mark .mark-line {
     margin: 0.8rem 0;
