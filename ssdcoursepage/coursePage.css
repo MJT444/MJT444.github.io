@@ -50,10 +50,11 @@ body > table {
 
 body > table:first-of-type {
   margin-top: 2rem !important;
-  background: var(--paper);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  background: transparent;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  box-shadow: none;
+  overflow: visible;
 }
 
 body > table:first-of-type > tbody > tr:first-child {
@@ -117,6 +118,27 @@ body > table:first-of-type > tbody > tr:nth-child(2) td {
   box-shadow: 0 4px 14px rgba(23, 107, 104, 0.1);
 }
 
+body > table:first-of-type > tbody > tr:nth-child(n + 3) td {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem clamp(1rem, 4vw, 3rem);
+}
+
+body > table:first-of-type > tbody > tr:nth-child(3) td {
+  border-left-color: var(--header);
+}
+
+body > table:first-of-type > tbody > tr:nth-child(4) td {
+  border-left-color: var(--accent);
+}
+
+body > table:first-of-type > tbody > tr:nth-child(5) td {
+  border-left-color: #8a6f2f;
+}
+
 body > table:first-of-type > tbody > tr:nth-child(2) a {
   display: inline-block;
   margin: 0.2rem 0.35rem;
@@ -169,6 +191,35 @@ body > table.tg {
   border-radius: 14px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+body > table.tg,
+body > table:has(#activity) {
+  margin-top: 2.5rem !important;
+}
+
+body > table.tg::before,
+body > table:has(#activity)::before {
+  display: block;
+  padding: 0.65rem 1rem;
+  color: var(--accent-dark);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body > table.tg:has(#schedule)::before {
+  content: "Course roadmap";
+}
+
+body > table.tg:has(#lab)::before {
+  content: "Practical learning";
+}
+
+body > table:has(#activity)::before {
+  content: "Assessment plan";
 }
 
 body > table.tg td,
